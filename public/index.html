@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>A small gift for you 💝</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <h1>A small gift for you 💝</h1>
+      <p>Pick a card, answer the quiz, unlock the message ✨</p>
+    </header>
+
+    <section class="buttons">
+      <button class="topic" data-key="attracted">What attracted me to you first</button>
+      <button class="topic" data-key="favorite">My favorite thing about you</button>
+      <button class="topic" data-key="special">What makes you special to me</button>
+      <button class="topic" data-key="different">What makes you different from everyone else</button>
+      <button class="topic" data-key="lucky">Why I feel lucky to have you</button>
+      <button class="topic" data-key="admire">What I admire about you the most</button>
+      <button class="topic" data-key="see">What I think when I see you</button>
+      <button class="topic" data-key="message">A small message</button>
+    </section>
+
+    <!-- QUIZ -->
+    <section class="card" id="quizCard" hidden>
+      <div class="cardTop">
+        <h2 id="quizTitle">Quiz</h2>
+        <button id="closeQuiz" class="close" aria-label="Close">✕</button>
+      </div>
+
+      <p id="question" class="question"></p>
+      <div class="answers" id="answers"></div>
+
+      <p id="feedback" class="feedback" aria-live="polite"></p>
+
+      <div class="gift" id="gift" hidden>
+        <h3>Unlocked 💝</h3>
+        <p id="giftText"></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
