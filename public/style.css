@@ -17,11 +17,11 @@ body{
   color:var(--txt);
   min-height:100vh;
 
-  /* ✨ PINK GLOW BACKGROUND */
+  /* Pink/purple glow background (ca inițial) */
   background:
     radial-gradient(1200px 600px at 20% 10%, rgba(255,79,216,.25), transparent 60%),
     radial-gradient(900px 500px at 80% 20%, rgba(109,242,255,.18), transparent 55%),
-    #0b0b14;
+    var(--bg);
 }
 
 /* container */
@@ -91,6 +91,7 @@ h1{
   display:flex;
   justify-content:space-between;
   align-items:center;
+  gap:12px;
 }
 
 .close{
@@ -105,12 +106,14 @@ h1{
 .question{
   font-size:20px;
   margin-top:12px;
+  line-height:1.45;
 }
 
+/* ✅ Answers one under another */
 .answers{
   margin-top:14px;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  display:flex;
+  flex-direction:column;
   gap:12px;
 }
 
@@ -122,10 +125,19 @@ h1{
   border-radius:14px;
   font-size:16px;
   cursor:pointer;
+  text-align:left;
+  transition:.15s;
 }
 
 .answer:hover{
   border-color: rgba(255,79,216,.45);
+  transform: translateY(-1px);
+}
+
+.answer:disabled{
+  opacity:.6;
+  cursor:default;
+  transform:none;
 }
 
 .feedback{
@@ -134,12 +146,23 @@ h1{
   color:var(--muted);
 }
 
+/* gift box */
 .gift{
   margin-top:16px;
   padding:18px;
   border-radius:18px;
   border:1px solid rgba(255,255,255,.12);
   background:linear-gradient(135deg, rgba(255,79,216,.15), rgba(109,242,255,.10));
+}
+
+/* ✅ Unlocked line on its own row */
+.unlockTitle{
+  font-size:22px;
+  font-weight:700;
+  margin-bottom:12px;
+}
+
+.unlockBody{
   font-size:18px;
   line-height:1.6;
 }
