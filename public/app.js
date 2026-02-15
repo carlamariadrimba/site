@@ -1,3 +1,12 @@
+const quizCard = document.getElementById("quizCard");
+const quizTitle = document.getElementById("quizTitle");
+const questionEl = document.getElementById("question");
+const answersEl = document.getElementById("answers");
+const feedbackEl = document.getElementById("feedback");
+const giftBox = document.getElementById("gift");
+const giftText = document.getElementById("giftText");
+const closeQuizBtn = document.getElementById("closeQuiz");
+
 const quizzes = {
   attracted: {
     title: "What attracted me to you first",
@@ -92,3 +101,59 @@ const quizzes = {
       "You unlocked the final message 🥹🥹🥹💖✨\n\nYou already know you are the most important person to me and I feel incredibly lucky that you came into my life. The way it happened was so random and goofy, yet it feels very special to me. The chances were so small and still something beautiful started.\n\nI am very grateful that you are exactly the way you are and I truly wish you all the happiness in the world because you deserve the very best. You have a beautiful heart and a kind soul.\n\nHappy Birthday 💝"
   }
 };
+
+function openQuiz(key) {
+  const q = quizzes[key];
+  if (!q) return;
+
+  quizTitle.textContent = q.title;
+  questionEl.textContent = q.question;
+
+  feedbackEl.textContent = "";
+  giftBox.hidden = true;
+  giftText.textContent = "";
+
+  answersEl.innerHTML = "";
+  q.options.forEach((opt, idx) => {
+    const btn = document.createElement("button");
+    btn.className = "answer";
+    btn.type = "button";
+    btn.textContent = opt;
+
+    btn.addEventListener("click", () => {
+      const correct = idx === q.correctIndex;
+
+      if (correct) {
+        feedbackEl.textContent = "Correct ✅";
+        giftText.textContent = q.reward;
+        giftBox.hidden = false;
+
+        [...answersEl.querySelectorAll("button")].forEach(b => (b.disabled = true));
+      } else {
+        feedbackEl.textContent = "Wrong answer ❌ Try again.";
+      }
+    });
+
+    answersEl.appendChild(btn);
+  });
+
+  quizCard.hidden = false;
+  quizCard.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function closeQuiz() {
+  quizCard.hidden = true;
+  answersEl.innerHTML = "";
+  feedbackEl.textContent = "";
+  giftBox.hidden = true;
+  giftText.textContent = "";
+}
+
+document.querySelectorAll(".topic").forEach(btn => {
+  btn.addEventListener("click", () => openQuiz(btn.dataset.key));
+});
+
+closeQuizBtn.addEventListener("click", closeQuiz);
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeQuiz();
+});
