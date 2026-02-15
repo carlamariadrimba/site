@@ -129,4 +129,23 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     quizCard.hidden = false;
-    quizCard.scrollIntoVi
+    quizCard.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  function closeQuiz() {
+    quizCard.hidden = true;
+    answersEl.innerHTML = "";
+    feedbackEl.textContent = "";
+    giftBox.hidden = true;
+    giftText.textContent = "";
+  }
+
+  document.querySelectorAll(".topic").forEach(btn => {
+    btn.addEventListener("click", () => openQuiz(btn.dataset.key));
+  });
+
+  closeQuizBtn.addEventListener("click", closeQuiz);
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeQuiz();
+  });
+});
