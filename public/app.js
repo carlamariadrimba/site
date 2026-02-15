@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
       correctIndex: 0,
       reward:
-        "You unlocked the final secret 🥹🥹🥹💖✨\n\nYou already know you are the most important person to me and I feel incredibly lucky that you came into my life. The way it happened was so random and goofy, yet it feels very special to me. The chances were so small and still something beautiful started.\n\nI am very grateful that you are exactly the way you are and I truly wish you all the happiness in the world because you deserve the very best. You have a beautiful heart and a kind soul.\n\nHappy Birthday 💝"
+        "You unlocked the final secret 🥹🥹🥹💖✨\n\nYou already know you are the most important person to me and I feel incredibly lucky that you came into my life. The way it happened was so random and goofy, yet it feels very special to me. The chances were so small and still something beautiful started.\n\nI am very grateful that you are exactly the way you are and I truly wish you all the happiness in the world because you deserve the very best. You have a beautiful heart and a kind soul.\n\nHappy Birthday 💝\n\nThis quote will always remind me of you.\n\n“Whatever our souls are made of, his and mine are the same.”\n\n       - Emily Brontë"
     }
   };
 
