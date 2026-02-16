@@ -49,6 +49,8 @@
       <button class="topic" data-key="see">What I think when I see you</button>
       <button class="topic" data-key="message">A small message</button>
       <button class="topic" id="complimentBtn">Tell me something nice</button>
+      <button class="topic" data-open="pinVideo">One of my fav memories of us</button>
+
 
     </section>
 
@@ -85,9 +87,37 @@
       <div class="answers">
        <button id="anotherCompliment" class="answer" type="button">Another one</button>
       </div>
-     </section>       
+     </section>     
+     
+     <!-- PIN FOR VIDEO -->
+    <section class="card" id="pinVideoCard" hidden>
+      <div class="cardTop">
+        <h2>🔒 Enter PIN</h2>
+      <button id="closePinVideo" class="close" type="button">X</button>
+      </div>
 
-         
+      <p class="question">Enter the PIN to unlock the video.</p>
+
+      <div class="answers">
+        <input id="pinVideoInput" class="lockInput" placeholder="PIN..." />
+        <button id="pinVideoBtn" class="answer" type="button">Unlock</button>
+      </div>
+
+      <p id="pinVideoFeedback" class="feedback"></p>
+    </section>
+
+    <!-- VIDEO PLAYER -->
+    <section class="card" id="videoCard" hidden>
+      <div class="cardTop">
+        <h2>💞 One of my fav memories of us</h2>
+        <button id="closeVideo" class="close" type="button">X</button>
+      </div>
+
+      <video id="memoryVideo" controls playsinline style="width:100%; border-radius:18px;">
+        <source src="assets/memory.mp4" type="video/mp4">
+      </video>
+    </section>
+
 
 
   </main>

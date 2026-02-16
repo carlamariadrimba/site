@@ -25,6 +25,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const anotherCompliment = document.getElementById("anotherCompliment");
   const closeCompliment = document.getElementById("closeCompliment");
 
+  // VIDEO WITH PIN
+  const pinVideoCard = document.getElementById("pinVideoCard");
+  const videoCard = document.getElementById("videoCard");
+
+  const closePinVideo = document.getElementById("closePinVideo");
+  const pinVideoInput = document.getElementById("pinVideoInput");
+  const pinVideoBtn = document.getElementById("pinVideoBtn");
+  const pinVideoFeedback = document.getElementById("pinVideoFeedback");
+
+  const closeVideo = document.getElementById("closeVideo");
+  const memoryVideo = document.getElementById("memoryVideo");
+
+  const VIDEO_PIN = "6767";
+
   const PASSWORD = "671342";
   const HINT_TEXT = "our fav number, a+b, a×b";
   lockHintText.textContent = HINT_TEXT;
@@ -311,4 +325,38 @@ anotherCompliment.addEventListener("click", () => {
   complimentText.textContent = pickCompliment();
 });
 closeCompliment.addEventListener("click", closeComplimentCard);
+
+function openPinVideo() {
+  quizCard.hidden = true;
+  complimentCard.hidden = true;
+
+  pinVideoInput.value = "";
+  pinVideoFeedback.textContent = "";
+  pinVideoCard.hidden = false;
+  pinVideoCard.scrollIntoView({ behavior: "smooth" });
+}
+
+function openVideo() {
+  pinVideoCard.hidden = true;
+  videoCard.hidden = false;
+  videoCard.scrollIntoView({ behavior: "smooth" });
+}
+
+function closeVideoCard() {
+  videoCard.hidden = true;
+  memoryVideo.pause();
+  memoryVideo.currentTime = 0;
+}
+
+pinVideoBtn.addEventListener("click", () => {
+  if (pinVideoInput.value === VIDEO_PIN) openVideo();
+  else pinVideoFeedback.textContent = "Wrong PIN ❌";
+});
+
+closePinVideo.addEventListener("click", () => pinVideoCard.hidden = true);
+closeVideo.addEventListener("click", closeVideoCard);
+
+document.querySelector('[data-open="pinVideo"]')
+  .addEventListener("click", openPinVideo);
+
 });
