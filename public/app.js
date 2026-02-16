@@ -18,6 +18,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const lockHintText = document.getElementById("lockHintText");
   const lockCard = lockOverlay?.querySelector(".lockCard");
 
+  //compliment cards
+  const complimentBtn = document.getElementById("complimentBtn");
+  const complimentCard = document.getElementById("complimentCard");
+  const complimentText = document.getElementById("complimentText");
+  const anotherCompliment = document.getElementById("anotherCompliment");
+  const closeCompliment = document.getElementById("closeCompliment");
+
   const PASSWORD = "671342";
   const HINT_TEXT = "our fav number, a+b, a×b";
   lockHintText.textContent = HINT_TEXT;
@@ -245,4 +252,63 @@ document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") closeQuiz();
   });
+
+  // compliments list
+const compliments = [
+  "You make my days brighter  ☀️",
+  "You are my favorite notification 💬",
+  "You make everything feel softer 🌸",
+  "I feel lucky you exist 🍀",
+  "You have the kindest heart I know 💖",
+  "You make me smile more than anyone else 😊",
+  "You are my safe place 🤍",
+  "You make any moments feel special ✨",
+  "You are my safe place 🏡",
+  "You inspire me to be a better person 🌱",
+  "You make the world feel less scary 🌍",
+  "You are my favorite part of every day 💫",
+  "I love how your mind works 🧠💘",
+  "You make everything more fun 🎈",
+  "You make me feel understood 🫶",
+  "You make my heart feel full 💓",
+  "I’m really grateful you are in my life 💝",
+
+  "You’re dangerously easy to get attached to 😌",
+  "You’re my favorite distraction 😏",
+  "You’re soo addictive 💘",
+  "You make it very hard for me to focus on anything else 🙄💖",
+  "You owe me more attention 😌",
+  "You’re the reason my phone battery dies so fast 📱",
+  "You’re perfect for me 🤨💘"
+];
+
+let lastComplimentIndex = -1;
+
+function pickCompliment() {
+  let idx = Math.floor(Math.random() * compliments.length);
+
+  if (compliments.length > 1 && idx === lastComplimentIndex) {
+    idx = (idx + 1) % compliments.length;
+  }
+
+  lastComplimentIndex = idx;
+  return compliments[idx];
+}
+
+function openCompliment() {
+  quizCard.hidden = true;
+  complimentText.textContent = pickCompliment();
+  complimentCard.hidden = false;
+  complimentCard.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function closeComplimentCard() {
+  complimentCard.hidden = true;
+}
+
+complimentBtn.addEventListener("click", openCompliment);
+anotherCompliment.addEventListener("click", () => {
+  complimentText.textContent = pickCompliment();
+});
+closeCompliment.addEventListener("click", closeComplimentCard);
 });

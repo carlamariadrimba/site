@@ -48,6 +48,8 @@
       <button class="topic" data-key="admire">What I admire about you the most</button>
       <button class="topic" data-key="see">What I think when I see you</button>
       <button class="topic" data-key="message">A small message</button>
+      <button class="topic" id="complimentBtn">Tell me something nice</button>
+
     </section>
 
     <!-- QUIZ CARD (se deschide când apeși pe butoane) -->
@@ -69,6 +71,23 @@
       </div>
 
     </section>
+
+
+    <!---compliment card> -->
+     <section class="card" id="complimentCard" hidden>
+      <div class="cardTop">
+         <h2>💌 A little compliment</h2>
+        <button id="closeCompliment" class="close" type="button">X</button>
+      </div>
+
+       <p id="complimentText" class="question"></p>
+
+      <div class="answers">
+       <button id="anotherCompliment" class="answer" type="button">Another one</button>
+      </div>
+     </section>       
+
+         
 
 
   </main>
