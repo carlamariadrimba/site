@@ -20,6 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const PASSWORD = "671342";
   const HINT_TEXT = "our fav number, a+b, a×b";
+  lockHintText.textContent = HINT_TEXT;
+
 
   let tries = 0;
 
@@ -38,31 +40,25 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function unlock() {
-    const val = (lockInput.value || "").trim();
+  const val = (lockInput.value || "").trim();
 
-    if (val === PASSWORD) {
-      lockFeedback.textContent = "✅ Unlocked.";
-      hideLock();
-      return;
-    }
-
-    tries++;
-    lockFeedback.textContent = "❌ Wrong password. Try again.";
-    lockInput.select();
-
-    // shake
-    if (lockCard) {
-      lockCard.classList.remove("shake");
-      void lockCard.offsetWidth;
-      lockCard.classList.add("shake");
-    }
-
-    // show hint after 2 tries (you can change this number)
-    if (tries >= 2) {
-      lockHintBox.hidden = false;
-      lockHintText.textContent = HINT_TEXT;
-    }
+  if (val === PASSWORD) {
+    lockFeedback.textContent = "✅ Unlocked.";
+    hideLock();
+    return;
   }
+
+  lockFeedback.textContent = "❌ Wrong password. Try again.";
+  lockInput.select();
+
+  // shake animation
+  if (lockCard) {
+    lockCard.classList.remove("shake");
+    void lockCard.offsetWidth;
+    lockCard.classList.add("shake");
+  }
+}
+
 
   // If overlay exists, enforce lock on entry
   if (lockOverlay) {
