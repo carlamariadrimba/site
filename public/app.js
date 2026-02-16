@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeVideo = document.getElementById("closeVideo");
   const memoryVideo = document.getElementById("memoryVideo");
 
-  const VIDEO_PIN = "6767";
+  const VIDEO_PIN = "67";
 
   const PASSWORD = "671342";
   const HINT_TEXT = "our fav number, a+b, a×b";
@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
       options: ["November 14", "November 16", "November 18", "November 20"],
       correctIndex: 2,
       reward:
-        "You unlocked a little secret 🥹🥹🥹💖✨\n\nThe very first thing that attracted me to you was your retarded humor that was just like mine. I knew that you were different in a way that felt rare and shocking. That first spark still feels special to me."
+        "You unlocked a little secret 🥹🥹🥹💖✨\n\nThe very first thing that attracted me to you was your retarded humor that was just as bad as mine. I knew that you were different in a way that felt rare and shocking. That first spark still feels special to me."
     },
 
     favorite: {
@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
       correctIndex: 2,
       reward:
-        "You found a hidden message 🥹🥹💌✨\n\nWhat makes you special to me is how much I can feel your care in every single word you type. You make me feel seen and understood. You pay attention to every word I say, trying to understand the meaning behind it, why I chose it, and what I’m truly feeling in each moment. I’ve never experienced something like this before, and it’s a feeling that’s almost impossible to put into words. 💫"
+        "You found a hidden message 🥹🥹💌✨\n\nWhat makes you special to me is how much I can feel your care in every single word you type and say. You make me feel seen and understood. You pay attention to every word I say, trying to understand the meaning behind it, why I chose it, and what I’m truly feeling in each moment. I’ve never experienced something like this before, and it’s a feeling that’s almost impossible to put into words. 💫"
     },
 
     different: {
@@ -190,7 +190,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
       correctIndex: 0,
       reward:
-        "You unlocked the final secret 🥹🥹🥹💖✨\n\nYou already know you are the most important person to me and I feel incredibly lucky that you came into my life. The way it happened was so random and goofy, yet it feels very special to me. The chances were so small and still something beautiful started.\n\nI am very grateful that you are exactly the way you are and I truly wish you all the happiness in the world because you deserve the very best. You have a beautiful heart and a kind soul and you already hold a very special place in my heart.\n\nHappy Birthday 💝\n\nThis quote will always remind me of you.\n\n“Whatever our souls are made of, his and mine are the same.”\n\n       - Emily Brontë"
+        "You unlocked the final secret 🥹🥹🥹💖✨\n\nYou already know you are the most important person to me and I feel incredibly lucky that you came into my life. The way it happened was so random and goofy, yet it feels very special to me. The chances were so small and still something sooo beautiful started.\n\nI am very grateful that you are exactly the way you are and I truly wish you all the happiness in the world because you deserve the very best. You have a beautiful heart and a kind soul and you already hold a very special place in my heart.\n\nHappy Birthday 💝\n\nThis quote will always remind me of you.\n\n“Whatever our souls are made of, his and mine are the same.”\n\n       - Emily Brontë"
     }
   };
 
