@@ -7,6 +7,80 @@ document.addEventListener("DOMContentLoaded", () => {
   const giftBox = document.getElementById("gift");
   const giftText = document.getElementById("giftText");
   const closeQuizBtn = document.getElementById("closeQuiz");
+    // ---------------------------
+  // LOCK SCREEN (entry password)
+  // ---------------------------
+  const lockOverlay = document.getElementById("lockOverlay");
+  const lockInput = document.getElementById("lockInput");
+  const lockBtn = document.getElementById("lockBtn");
+  const lockFeedback = document.getElementById("lockFeedback");
+  const lockHintBox = document.getElementById("lockHintBox");
+  const lockHintText = document.getElementById("lockHintText");
+  const lockCard = lockOverlay?.querySelector(".lockCard");
+
+  const PASSWORD = "671342";
+  const HINT_TEXT = "our fav number, a+b, a×b";
+
+  let tries = 0;
+
+  function showLock() {
+    lockOverlay.hidden = false;
+    lockOverlay.style.display = "grid";
+    lockOverlay.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+    setTimeout(() => lockInput.focus(), 0);
+  }
+
+  function hideLock() {
+    lockOverlay.style.display = "none";
+    lockOverlay.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  }
+
+  function unlock() {
+    const val = (lockInput.value || "").trim();
+
+    if (val === PASSWORD) {
+      lockFeedback.textContent = "✅ Unlocked.";
+      hideLock();
+      return;
+    }
+
+    tries++;
+    lockFeedback.textContent = "❌ Wrong password. Try again.";
+    lockInput.select();
+
+    // shake
+    if (lockCard) {
+      lockCard.classList.remove("shake");
+      void lockCard.offsetWidth;
+      lockCard.classList.add("shake");
+    }
+
+    // show hint after 2 tries (you can change this number)
+    if (tries >= 2) {
+      lockHintBox.hidden = false;
+      lockHintText.textContent = HINT_TEXT;
+    }
+  }
+
+  // If overlay exists, enforce lock on entry
+  if (lockOverlay) {
+    showLock();
+    lockBtn.addEventListener("click", unlock);
+    lockInput.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") unlock();
+    });
+
+    // Optional: prevent closing with Escape
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && lockOverlay.style.display !== "none") {
+        e.preventDefault();
+        lockFeedback.textContent = "Enter the password 🙂 (PIN)";
+      }
+    });
+  }
+
 
   const quizzes = {
     attracted: {
@@ -89,10 +163,10 @@ document.addEventListener("DOMContentLoaded", () => {
     },
 
     message: {
-      title: "A small message",
+      title: "A small message hihi",
       question: "What do we think about anime?",
       options: [
-        "Fucking disgusting terrible shit",
+        "I know I shouldn't watch them. I'm so sorry I do. I'll stop for you ml",
         "Fire!",
         "We love them!",
         "Fuck yeah!"

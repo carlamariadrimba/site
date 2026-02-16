@@ -7,6 +7,31 @@
 </head>
 
 <body>
+
+  <body>
+
+  <!-- LOCK OVERLAY -->
+  <div id="lockOverlay" class="lockOverlay" aria-hidden="true">
+    <div class="lockCard" role="dialog" aria-modal="true" aria-labelledby="lockTitle">
+      <h2 id="lockTitle">🔒 Enter password</h2>
+      <p class="lockSub">This page is private.</p>
+
+      <div class="lockRow">
+        <input id="lockInput" class="lockInput" type="password" inputmode="numeric"
+               placeholder="Password..." autocomplete="off" />
+        <button id="lockBtn" class="lockBtn" type="button">Unlock</button>
+      </div>
+
+      <p id="lockFeedback" class="lockFeedback"></p>
+
+      <div id="lockHintBox" class="lockHintBox" hidden>
+        <div class="lockHintTitle">Hint</div>
+        <div id="lockHintText" class="lockHintText"></div>
+      </div>
+    </div>
+  </div>
+
+
   <main class="wrap">
 
     <header class="hero">
@@ -44,6 +69,7 @@
       </div>
 
     </section>
+
 
   </main>
 
