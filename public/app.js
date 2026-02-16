@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
       options: ["November 14", "November 16", "November 18", "November 20"],
       correctIndex: 2,
       reward:
-        "You unlocked a little secret 🥹🥹🥹💖✨\n\nThe very first thing that attracted me to you was your dark humor. The moment I realized we laughed at the same things, I felt that you were different in a way that felt rare and comforting. That first spark still feels special to me."
+        "You unlocked a little secret 🥹🥹🥹💖✨\n\nThe very first thing that attracted me to you was your retarded humor that was just like mine. I knew that you were different in a way that felt rare and shocking. That first spark still feels special to me."
     },
 
     favorite: {
@@ -121,12 +121,12 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
       correctIndex: 1,
       reward:
-        "A little secret unlocked 🥹🥹💖✨\n\nMy favorite thing about you is how incredibly smart you are. The way your mind works genuinely amazes me and it is something I admire every day."
+        "A little secret unlocked 🥹🥹💖✨\n\nMy favorite thing about you is how incredibly smart you are (I'm still smarter tho). I don't wanna boost your ego too much, but the way your mind works genuinely amazes me and it is something I admire every single day."
     },
 
     special: {
       title: "What makes you special to me",
-      question: "Biggest typo ever?",
+      question: "Biggest fuck ups OAT?",
       options: [
         "strawberries with white chocolate",
         "fuck mery im gonna cry",
@@ -135,16 +135,16 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
       correctIndex: 2,
       reward:
-        "You found a hidden message 🥹🥹💌✨\n\nWhat makes you special to me is how much I can feel your care in every single word you type. You make me feel seen and understood."
+        "You found a hidden message 🥹🥹💌✨\n\nWhat makes you special to me is how much I can feel your care in every single word you type. You make me feel seen and understood. You pay attention to every word I say, trying to understand the meaning behind it, why I chose it, and what I’m truly feeling in each moment. I’ve never experienced something like this before, and it’s a feeling that’s almost impossible to put into words. 💫"
     },
 
     different: {
       title: "What makes you different from everyone else",
       question: "My birthday?",
       options: [
-        "September 17, 2003",
+        "September 17, 2003 (Wednesday)",
         "September 10, 2003 (Saturday)",
-        "September 10, 2004",
+        "September 10, 2004 (Thursday)",
         "September 10, 2003 (Wednesday)"
       ],
       correctIndex: 3,
@@ -158,7 +158,7 @@ document.addEventListener("DOMContentLoaded", () => {
       options: ["Maya Mucea", "Maia Mucea", "Mia Mucea", "Maria Mucea"],
       correctIndex: 0,
       reward:
-        "You unlocked something special 🥹🥹🍀✨\n\nI feel lucky to have you because you motivate me to become a better version of myself every single day."
+        "You unlocked something special 🥹🥹🍀✨\n\nI feel lucky to have you because you motivate me to become a better version of myself every single day. Finding someone who inspires you to grow and become better every day, not because they ask you to, but because you choose it for yourself just to see them happy, is something incredibly rare. ✨"
     },
 
     admire: {
@@ -167,7 +167,7 @@ document.addEventListener("DOMContentLoaded", () => {
       options: ["8/16/5", "5/19/5", "6/15/5", "7/14/5"],
       correctIndex: 1,
       reward:
-        "Another secret unlocked 🥹🥹♟️✨\n\nI admire your motivation and commitment. When you want something, you truly work for it and that inspires me."
+        "Another secret unlocked 🥹🥹♟️✨\n\nI admire your motivation and commitment to anything. When you want something, you truly work for it and that inspires me."
     },
 
     see: {
@@ -176,7 +176,7 @@ document.addEventListener("DOMContentLoaded", () => {
       options: ["Scrum", "Cenusa", "Foc", "Dorul"],
       correctIndex: 0,
       reward:
-        "A hidden message appeared 🥹🥹🧸✨\n\nWhenever I see you, everything feels softer and calmer. You give me a feeling of warmth and comfort."
+        "A hidden message appeared 🥹🥹🧸✨\n\n🧸 - this is how I feel when I see you. Whenever I see you, everything feels softer and calmer. You give me a feeling of warmth, comfort and safety."
     },
 
     message: {
@@ -190,7 +190,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
       correctIndex: 0,
       reward:
-        "You unlocked the final secret 🥹🥹🥹💖✨\n\nYou already know you are the most important person to me and I feel incredibly lucky that you came into my life. The way it happened was so random and goofy, yet it feels very special to me. The chances were so small and still something beautiful started.\n\nI am very grateful that you are exactly the way you are and I truly wish you all the happiness in the world because you deserve the very best. You have a beautiful heart and a kind soul.\n\nHappy Birthday 💝\n\nThis quote will always remind me of you.\n\n“Whatever our souls are made of, his and mine are the same.”\n\n       - Emily Brontë"
+        "You unlocked the final secret 🥹🥹🥹💖✨\n\nYou already know you are the most important person to me and I feel incredibly lucky that you came into my life. The way it happened was so random and goofy, yet it feels very special to me. The chances were so small and still something beautiful started.\n\nI am very grateful that you are exactly the way you are and I truly wish you all the happiness in the world because you deserve the very best. You have a beautiful heart and a kind soul and you already hold a very special place in my heart.\n\nHappy Birthday 💝\n\nThis quote will always remind me of you.\n\n“Whatever our souls are made of, his and mine are the same.”\n\n       - Emily Brontë"
     }
   };
 
