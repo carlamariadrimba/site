@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Playfair+Display:wght@600;700&family=Great+Vibes&display=swap');
 
 :root{
   --bg:rgb(90, 23, 167);
@@ -71,23 +71,40 @@ h1{
 }
 
 .topic{
-  background:rgba(30,20,60,.55);
-  border:1px solid rgba(255,255,255,.18);
+  background: rgba(35,15,70,.35); /* transparent glass */
+  border:1px solid rgba(255,255,255,.22);
   color:var(--txt);
-  padding:20px;
-  border-radius:20px;
+
+  padding:22px;
+  border-radius:22px;
   cursor:pointer;
-  text-align:left;
-  font-size:17px;
+
+  /* ✨ centru text */
+  text-align:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  /* ✨ font romantic */
+  font-family:'Playfair Display', serif;
+  font-size:19px;
+  letter-spacing:.3px;
+
+  backdrop-filter: blur(12px);
   transition:.25s;
-  backdrop-filter: blur(10px);
+
+  text-shadow: 0 0 10px rgba(255,255,255,.15);
 }
 
+
 .topic:hover{
-  transform: translateY(-4px) scale(1.02);
+  transform: translateY(-5px) scale(1.03);
   border-color: rgba(255,79,216,.7);
-  box-shadow:0 0 20px rgba(255,79,216,.35);
+  box-shadow:
+    0 0 25px rgba(255,79,216,.35),
+    0 0 60px rgba(160,110,255,.25);
 }
+
 
 
 /* quiz card */
