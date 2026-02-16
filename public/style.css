@@ -1,27 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap');
 
 :root{
-  --bg:#0b0b14;
-  --card:#15152a;
-  --txt:#f4f4ff;
-  --muted:#b9b9d6;
-  --accent:#ff4fd8;
-  --accent2:#6df2ff;
+  --bg:rgb(90, 23, 167);
+  --card:rgba(46, 19, 68, 0.55);
+  --txt:#fff6ff;
+  --muted:#d9c9ff;
+  --accent:#e63b6e;
+  --accent2:#b07cff;
+  --accent3:#e6c3e2;
 }
+
 
 *{box-sizing:border-box}
 
 body{
   margin:0;
-  font-family:'Poppins', sans-serif;
+  font-family:'Quicksand', sans-serif;
   color:var(--txt);
   min-height:100vh;
 
   /* Pink/purple glow background (ca inițial) */
   background:
-    radial-gradient(1200px 600px at 20% 10%, rgba(255,79,216,.25), transparent 60%),
-    radial-gradient(900px 500px at 80% 20%, rgba(109,242,255,.18), transparent 55%),
-    var(--bg);
+  radial-gradient(1200px 600px at 10% 10%, rgba(255,120,220,.45), transparent 60%),
+  radial-gradient(1000px 600px at 90% 10%, rgba(160,110,255,.35), transparent 60%),
+  radial-gradient(800px 500px at 50% 90%, rgba(255,90,200,.25), transparent 60%),
+  linear-gradient(180deg,#120022,#070012);
+
 }
 
 /* container */
@@ -33,19 +37,24 @@ body{
 
 /* hero */
 .hero{
-  background: linear-gradient(135deg, rgba(255,79,216,.15), rgba(109,242,255,.10));
-  border:1px solid rgba(255,255,255,.10);
-  border-radius:22px;
-  padding:26px;
-  backdrop-filter: blur(10px);
+  background: linear-gradient(135deg, rgba(255,79,216,.25), rgba(160,110,255,.25));
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:26px;
+  padding:30px;
+  backdrop-filter: blur(14px);
   text-align:center;
+  box-shadow:0 0 40px rgba(255,100,220,.25);
 }
+
 
 h1{
   margin:0;
-  font-size:46px;
+  font-size:52px;
+  font-family:'Playfair Display', serif;
   font-weight:700;
+  letter-spacing:.5px;
 }
+
 
 .hero p{
   margin-top:8px;
@@ -62,30 +71,36 @@ h1{
 }
 
 .topic{
-  background:rgba(21,21,42,.85);
-  border:1px solid rgba(255,255,255,.10);
+  background:rgba(30,20,60,.55);
+  border:1px solid rgba(255,255,255,.18);
   color:var(--txt);
-  padding:18px;
-  border-radius:18px;
+  padding:20px;
+  border-radius:20px;
   cursor:pointer;
   text-align:left;
   font-size:17px;
-  transition:.2s;
+  transition:.25s;
+  backdrop-filter: blur(10px);
 }
 
 .topic:hover{
-  transform: translateY(-2px);
-  border-color: rgba(255,79,216,.45);
+  transform: translateY(-4px) scale(1.02);
+  border-color: rgba(255,79,216,.7);
+  box-shadow:0 0 20px rgba(255,79,216,.35);
 }
+
 
 /* quiz card */
 .card{
   margin-top:22px;
-  background:rgba(21,21,42,.95);
-  border:1px solid rgba(255,255,255,.12);
-  border-radius:22px;
-  padding:22px;
+  background:rgba(25,15,50,.65);
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:26px;
+  padding:24px;
+  backdrop-filter: blur(14px);
+  box-shadow:0 0 30px rgba(160,110,255,.25);
 }
+
 
 .cardTop{
   display:flex;
@@ -149,11 +164,13 @@ h1{
 /* gift box */
 .gift{
   margin-top:16px;
-  padding:18px;
-  border-radius:18px;
-  border:1px solid rgba(255,255,255,.12);
-  background:linear-gradient(135deg, rgba(255,79,216,.15), rgba(109,242,255,.10));
+  padding:20px;
+  border-radius:20px;
+  border:1px solid rgba(255,255,255,.18);
+  background:linear-gradient(135deg, rgba(255,79,216,.25), rgba(160,110,255,.25));
+  box-shadow:0 0 25px rgba(255,100,220,.35);
 }
+
 
 /* ✅ Unlocked line on its own row */
 .unlockTitle{
